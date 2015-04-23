@@ -90,7 +90,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "CmgUp  V1.7 2014-01-25";
+            this.Text = "CmgUpNew  V1.0 2015-04-23";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
