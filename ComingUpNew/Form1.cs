@@ -123,7 +123,7 @@ namespace ComingUp
                 DateTime ProgTime = DateTime.Parse(Sch_Dt.Rows[i]["datetime"].ToString());
                 //Program1 = ["The World after Fukushima 2","01:00"]
 
-                string ProgTimeText = ProgTime.ToShortTimeString().Substring(0, 5);
+                string ProgTimeText = ProgTime.ToShortTimeString().Substring(0, 1) + ":" + ConfigurationSettings.AppSettings["TimeScheduleMinute"].ToString();
                 Data.AppendLine("Program" + (i + 1).ToString() + " = [\"" + ProgName + "\",\"" + ProgTimeText + "\"]");
 
             }
