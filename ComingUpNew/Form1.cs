@@ -79,14 +79,22 @@ namespace ComingUp
                 int SecondIndex = 0;
                 if (FirstIndex > 0)
                 {
-                    SecondIndex = ProgName.IndexOf("-", FirstIndex + 1);
-                    if (SecondIndex > FirstIndex)
+                    if (ProgName.StartsWith("Doc"))
                     {
-                        ProgName = ProgName.Remove(FirstIndex, SecondIndex - FirstIndex + 1);
-                        ProgName = ProgName.Insert(FirstIndex, ":");
+                        SecondIndex = ProgName.IndexOf("-", FirstIndex + 1);
+                        if (SecondIndex > FirstIndex)
+                        {
+                            ProgName = ProgName.Remove(FirstIndex, SecondIndex - FirstIndex + 1);
+                            ProgName = ProgName.Insert(FirstIndex, ":");
+                        }
+                        ProgName = ProgName.Replace("  :", ":");
+                        ProgName = ProgName.Replace(" :", ":");
                     }
-                    ProgName = ProgName.Replace("  :", ":");
-                    ProgName = ProgName.Replace(" :", ":");
+                    else
+                    {
+                        //2015-07-13
+                        ProgName = ProgName.Remove(FirstIndex, ProgName.Length-FirstIndex);
+                    }
 
                 }
 
