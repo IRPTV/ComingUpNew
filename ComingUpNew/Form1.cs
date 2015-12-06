@@ -73,6 +73,8 @@ namespace ComingUp
                 //2014-01-25 Replace Documentry by Doc
                 ProgName = ProgName.Replace("documentary", "Doc");
                 ProgName = ProgName.Replace("Documentary", "Doc");
+                ProgName = ProgName.Replace("Medium Items - 1 - ", "");
+                ProgName = ProgName.Replace("Medium Items - 2 - ", "");
 
 
                 int FirstIndex = ProgName.IndexOf("-");
@@ -131,7 +133,8 @@ namespace ComingUp
                 DateTime ProgTime = DateTime.Parse(Sch_Dt.Rows[i]["datetime"].ToString());
                 //Program1 = ["The World after Fukushima 2","01:00"]
 
-                string ProgTimeText = ProgTime.Hour.ToString("00") + ":" + ConfigurationSettings.AppSettings["TimeScheduleMinute"].ToString();
+                //string ProgTimeText = ProgTime.Hour.ToString("00") + ":" + ConfigurationSettings.AppSettings["TimeScheduleMinute"].ToString();
+                string ProgTimeText = ProgTime.Hour.ToString("00") + ":" + Math.Floor((decimal)ProgTime.Minute).ToString("00");
                 Data.AppendLine("Program" + (i + 1).ToString() + " = [\"" + ProgName + "\",\"" + ProgTimeText + "\"]");
 
             }
