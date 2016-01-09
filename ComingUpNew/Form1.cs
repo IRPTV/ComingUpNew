@@ -134,7 +134,7 @@ namespace ComingUp
                 //Program1 = ["The World after Fukushima 2","01:00"]
 
                 //string ProgTimeText = ProgTime.Hour.ToString("00") + ":" + ConfigurationSettings.AppSettings["TimeScheduleMinute"].ToString();
-                string ProgTimeText = ProgTime.Hour.ToString("00") + ":" + Math.Floor((decimal)ProgTime.Minute).ToString("00");
+                string ProgTimeText = ProgTime.Hour.ToString("00") + ":" + Math.Floor((decimal)ProgTime.Minute+1).ToString("00");
                 Data.AppendLine("Program" + (i + 1).ToString() + " = [\"" + ProgName + "\",\"" + ProgTimeText + "\"]");
 
             }
