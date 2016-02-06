@@ -153,6 +153,7 @@ SELECT id, date, up_id, datetime, name, duration, type, grouping, source, descri
 FROM            tblData
 WHERE        (datetime &gt; @DT) AND (type LIKE N'Rec%' OR
                          type LIKE N'Doc%' OR
+                         type LIKE N'Med%' OR
                          type = N'L-P-R' OR
                          type = N'L-P-N' OR
                          type = N'L-P') AND (NOT (name LIKE '%(Cont.)%'))
@@ -173,7 +174,7 @@ ORDER BY datetime</CommandText>
   <xs:element name="MyDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MyDB" msprop:Generator_UserDSName="MyDB">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Schedules" msprop:Generator_TableClassName="SchedulesDataTable" msprop:Generator_TableVarName="tableSchedules" msprop:Generator_RowChangedName="SchedulesRowChanged" msprop:Generator_TablePropName="Schedules" msprop:Generator_RowDeletingName="SchedulesRowDeleting" msprop:Generator_RowChangingName="SchedulesRowChanging" msprop:Generator_RowEvHandlerName="SchedulesRowChangeEventHandler" msprop:Generator_RowDeletedName="SchedulesRowDeleted" msprop:Generator_RowClassName="SchedulesRow" msprop:Generator_UserTableName="Schedules" msprop:Generator_RowEvArgName="SchedulesRowChangeEvent">
+        <xs:element name="Schedules" msprop:Generator_TableClassName="SchedulesDataTable" msprop:Generator_TableVarName="tableSchedules" msprop:Generator_TablePropName="Schedules" msprop:Generator_RowDeletingName="SchedulesRowDeleting" msprop:Generator_RowChangingName="SchedulesRowChanging" msprop:Generator_RowEvHandlerName="SchedulesRowChangeEventHandler" msprop:Generator_RowDeletedName="SchedulesRowDeleted" msprop:Generator_UserTableName="Schedules" msprop:Generator_RowChangedName="SchedulesRowChanged" msprop:Generator_RowEvArgName="SchedulesRowChangeEvent" msprop:Generator_RowClassName="SchedulesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:decimal" />

@@ -1514,6 +1514,7 @@ SELECT id, date, up_id, datetime, name, duration, type, grouping, source, descri
 FROM            tblData
 WHERE        (datetime > @DT) AND (type LIKE N'Rec%' OR
                          type LIKE N'Doc%' OR
+                         type LIKE N'Med%' OR
                          type = N'L-P-R' OR
                          type = N'L-P-N' OR
                          type = N'L-P') AND (NOT (name LIKE '%(Cont.)%'))
