@@ -1517,7 +1517,7 @@ WHERE        (datetime > @DT) AND (type LIKE N'Rec%' OR
                          type LIKE N'Med%' OR
                          type = N'L-P-R' OR
                          type = N'L-P-N' OR
-                         type = N'L-P') AND (NOT (name LIKE '%(Cont.)%'))
+                         type = N'L-P') AND (NOT (name LIKE '%(Cont.)%'))  and duration>300
 ORDER BY datetime";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DT", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

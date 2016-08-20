@@ -95,7 +95,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "CmgUpNew 20101009";
+            this.Text = "CmgUpNew 20160820";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
