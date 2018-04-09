@@ -101,6 +101,8 @@ namespace ComingUp
                     }
 
                 }
+                ProgName = ProgName.Replace("\"", "”");
+                //ProgName = ProgName.Replace("”", "'");
 
                 //Commented for new Coming UP:
                 int TitleLenght = int.Parse(ConfigurationSettings.AppSettings["TitleLenght"].ToString().Trim());
